@@ -94,7 +94,7 @@ class Config
         /**
          * Database name.
          */
-        define('DB_NAME', 'university');
+        define('DB_NAME', 'nhaxinh');
 
         /**
          * Database username.
