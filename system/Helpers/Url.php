@@ -86,21 +86,13 @@ class Url
         return SITEURL .'templates/' .$template .$folder;
     }
 
-    public static function templateHomePath($custom = HOME, $folder = '/assets/')
-    {
-        $template = Inflector::tableize($custom);
-
-        return SITEURL .'templates/' .$template .$folder;
-    }
-
-    public static function templateLoginPath($custom = LOGIN, $folder = '/assets/')
-    {
-        $template = Inflector::tableize($custom);
-
-        return SITEURL .'templates/' .$template .$folder;
-    }
-
-    public static function templateLoginHomePath($custom =  SIGNUP, $folder = '/assets/')
+    /**
+     * Created the absolute address to the template folder.
+     *
+     * @param  boolean $custom
+     * @return string url to template folder
+     */
+    public static function consolePath($custom = CONSOLE, $folder = '/assets/')
     {
         $template = Inflector::tableize($custom);
 

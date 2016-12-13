@@ -22,17 +22,17 @@ class Config
         /**
          * Define the complete site URL.
          */
-        define('SITEURL', 'http://localhost/ewsd2016/');
+        define('SITEURL', 'http://localhost:8080/nhaxinhphp/');
 
         /**
          * Define relative base path.
          */
-        define('DIR', '/ewsd2016/');
+        define('DIR', '/nhaxinhphp/');
 
         /**
          * Define Dashboard path.
          */
-        define('ADMIN_DIR', '/ewsd2016/admin/');
+        define('ADMIN_DIR', '/nhaxinhphp/admin/');
 
         /**
          * Set the Application Router.
@@ -56,22 +56,13 @@ class Config
         /**
          * Set the default template.
          */
-        define('LOGIN', 'Login');
+        define('CONSOLE', 'Console');
 
-        /**
-         * Set the home template.
-         */
-        define('HOME', 'Home');
-
-        /**
-         * Set the default template.
-         */
-        define('SIGNUP', 'Signup');
 
         /**
          * Set the site title.
          */
-        define('SITETITLE', 'Contribution System');
+        define('SITETITLE', 'Casa Funiture');
 
 
         /**
@@ -114,7 +105,7 @@ class Config
         /**
          * PREFER to be used in database calls default is smvc_
          */
-        define('HOMENAME', 'Contributor');
+        define('HOMENAME', 'Casa Funiture');
 
         /**
          * Set prefix for sessions.
@@ -141,14 +132,6 @@ class Config
          * Define upload image size   
          */
         define('SIZEIMAGE', 2048000);
-
-        /**
-         * ENTRY_STATUS
-         */
-        define('STATUS_APPROVED','approved');
-        define('STATUS_NON_APPROVED','non_approved');
-        define('STATUS_IS_REVIEWED','is_reviewed');
-        define('STATUS_CLOSE','closed');
 
         /**
          * Start sessions.
