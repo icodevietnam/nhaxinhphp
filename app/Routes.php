@@ -13,6 +13,9 @@ $router = Router::getInstance();
 // Default Routing
 Router::get('/console', 'App\Controllers\Console@index');
 
+// Login Routing
+Router::get('/login', 'App\Controllers\Login@index');
+
 
 /** End default routes */
 

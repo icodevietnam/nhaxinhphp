@@ -18,9 +18,9 @@ class Console extends Controller {
     public function index(){
     	$data['title'] = 'Console';
         $data['menu'] = 'Console';
-    	View::renderTemplate('header', $data,"Console");
+    	View::renderTemplate('header', $data,CONSOLE);
         View::render('Console/Console', $data);
-        View::renderTemplate('footer', $data,"Console");
+        View::renderTemplate('footer', $data,CONSOLE);
     }
 
 

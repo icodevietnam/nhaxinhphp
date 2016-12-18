@@ -22,7 +22,7 @@ class Config
         /**
          * Define the complete site URL.
          */
-        define('SITEURL', 'http://localhost/nhaxinhphp/');
+        define('SITEURL', 'http://localhost:8080/nhaxinhphp/');
 
         /**
          * Define relative base path.
@@ -57,6 +57,12 @@ class Config
          * Set the default template.
          */
         define('CONSOLE', 'Console');
+
+
+        /**
+         * Set the default template.
+         */
+        define('LOGIN', 'Login');
 
 
         /**
@@ -110,7 +116,7 @@ class Config
         /**
          * Set prefix for sessions.
          */
-        define('SESSION_PREFIX', 'ewsd_');
+        define('SESSION_PREFIX', 'nhaxinh_');
 
         /**
          * Optionall set a site email address.

@@ -99,6 +99,19 @@ class Url
         return SITEURL .'templates/' .$template .$folder;
     }
 
+    /**
+     * Created the absolute address to the template folder.
+     *
+     * @param  boolean $custom
+     * @return string url to template folder
+     */
+    public static function templateLoginPath($custom = LOGIN, $folder = '/assets/')
+    {
+        $template = Inflector::tableize($custom);
+
+        return SITEURL .'templates/' .$template .$folder;
+    }
+
 
     public static function uploadPath()
     {
