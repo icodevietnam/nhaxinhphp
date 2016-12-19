@@ -32,7 +32,7 @@ class Config
         /**
          * Define Dashboard path.
          */
-        define('ADMIN_DIR', '/nhaxinhphp/admin/');
+        define('ADMIN_DIR', '/nhaxinhphp/console/');
 
         /**
          * Set the Application Router.

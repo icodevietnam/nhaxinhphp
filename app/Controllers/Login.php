@@ -18,6 +18,9 @@ class Login extends Controller {
     }
 
     public function index(){
+        if(Session::get('loggin') == true){
+            url::redirect(ADMIN_DIR);
+        }
     	$data['title'] = 'Đăng nhập';
         $data['menu'] = 'Đăng nhập';
     	View::renderTemplate('header', $data,LOGIN);
@@ -30,12 +33,18 @@ class Login extends Controller {
     }
 
     public function login(){
+        if(Session::get('loggin') == true){
+            url::redirect(ADMIN_DIR);
+        }
+
         $username = $_POST['username'];
         $password = $_POST['password'];
-
         // Validation
-
+        if(Password::verify(md5($password), $userModel->get_hash($username)) == false){
+                die('wrong username or password');
+        } else {
+            Session::set('admin',true);
+            Url::redirect(ADMIN_DIR);
+        }
     }
-
-
 }

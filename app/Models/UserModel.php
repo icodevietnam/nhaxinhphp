@@ -3,12 +3,17 @@ namespace app\Models;
 
 use Core\Model;
 
-class Users extends Model
+class UserModel extends Model
 {
 	
 	function __construct()
 	{	
 		parent::__construct();
+	}
+
+	public function get_hash($username){
+		$data = $this->_db->select("SELECT password FROM ".PREFIX."user WHERE username = :username", array(':username' => $username));
+		return $data[0]->password;
 	}
 
 	//Get All
