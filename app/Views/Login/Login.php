@@ -1,4 +1,4 @@
-<form class="form" action="<?= DIR ?>admin/login" method="post" >
+<form class="form" action="<?= DIR ?>loginAdmin" method="post" >
     <input type="text" placeholder="Tên đăng nhập" name="username" />
     <input type="password" placeholder="Mật khẩu" name="password" />
     <button type="submit" class='btn-submit'>Đăng nhập</button>

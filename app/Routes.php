@@ -15,6 +15,7 @@ Router::get('/console', 'App\Controllers\Console@index');
 
 // Login Routing
 Router::get('/login', 'App\Controllers\Login@index');
+Router::post('/loginAdmin', 'App\Controllers\Login@login');
 
 
 /** End default routes */
