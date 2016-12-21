@@ -22,7 +22,7 @@ class Config
         /**
          * Define the complete site URL.
          */
-        define('SITEURL', 'http://localhost:8080/nhaxinhphp/');
+        define('SITEURL', 'http://localhost/nhaxinhphp/');
 
         /**
          * Define relative base path.

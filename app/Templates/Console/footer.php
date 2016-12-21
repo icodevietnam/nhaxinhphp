@@ -1,8 +1,10 @@
+  </div>
+  <!-- /.content-wrapper -->
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.7
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2016 <a href="http://icodingactive.com">Icoding Active Company</a>.</strong> All rights
     reserved.
   </footer>
   <!-- Add the sidebar's background. This div must be placed

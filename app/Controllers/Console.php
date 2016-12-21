@@ -23,5 +23,15 @@ class Console extends Controller {
         View::renderTemplate('footer', $data,CONSOLE);
     }
 
+    // User Admin Page
+    public function userPage(){
+        $data['title'] = 'Quản lý người dùng';
+        $data['menu'] = 'user';
+        $data['preview'] = 'preview';
+        View::renderTemplate('header', $data,CONSOLE);
+        View::render('Console/User/User', $data);
+        View::renderTemplate('footer', $data,CONSOLE);
+    }
+
 
 }

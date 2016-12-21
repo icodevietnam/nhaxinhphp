@@ -16,6 +16,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
 html .login-wrap {
   position: relative;
   margin: 0 auto;
@@ -102,6 +103,7 @@ html .login-wrap:after {
 
 .footer a{
   color: orange;
+  text-decoration: none;
 }
 
 .footer a:hover{
