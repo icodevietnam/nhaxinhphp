@@ -6,7 +6,10 @@ use Helpers\Hooks;
 
 /** Get the Router instance. */
 $router = Router::getInstance();
-$console_dir = "/console/";
+$console_dir = "/console";
+$logout = "/logout";
+$login = "/login";
+$loginAdmin = "/loginAdmin";
 
 /** Define static routes. */
 
@@ -14,11 +17,12 @@ $console_dir = "/console/";
 // Default Routing
 Router::get($console_dir, 'App\Controllers\Console@index');
 //user
-Router::get($console_dir.'user', 'App\Controllers\Console@userPage');
+Router::get($console_dir.'/user', 'App\Controllers\Console@userPage');
 
 // Login Routing
-Router::get('/login', 'App\Controllers\Login@index');
-Router::post('/loginAdmin', 'App\Controllers\Login@login');
+Router::get($login, 'App\Controllers\Login@index');
+Router::get($logout, 'App\Controllers\Login@logout');
+Router::post($loginAdmin, 'App\Controllers\Login@login');
 
 
 /** End default routes */

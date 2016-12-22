@@ -71,4 +71,11 @@ class Password
     {
         return password_verify($password, $hash);
     }
+
+    public static function compare($password,$pwdb){
+        if($password === $pwdb){
+            return true;
+        }
+        return false;
+    }
 }

@@ -26,7 +26,7 @@
     Assets::js([
     Url::consolePath().'bootstrap/js/bootstrap.min.js',
     Url::consolePath().'plugins/raphael/raphael.min.js',
-    Url::consolePath().'plugins/morris/morris.min.js',
+    //Url::consolePath().'plugins/morris/morris.min.js',
     Url::consolePath().'plugins/sparkline/jquery.sparkline.min.js',
     Url::consolePath().'plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
     Url::consolePath().'plugins/jvectormap/jquery-jvectormap-world-mill-en.js',

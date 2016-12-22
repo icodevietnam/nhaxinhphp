@@ -12,7 +12,7 @@ class UserModel extends Model
 	}
 
 	public function get_hash($username){
-		$data = $this->_db->select("SELECT password FROM ".PREFIX."user WHERE username = :username", array(':username' => $username));
+		$data = $this->db->select("SELECT U.password FROM ".PREFIX."user U, user_role UR, role R WHERE username = :username AND U.id = UR.user_id AND R.id = UR.role_id AND R.name = 'admin' ", array(':username' => $username));
 		return $data[0]->password;
 	}
 

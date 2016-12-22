@@ -29,6 +29,7 @@ class Config
          */
         define('DIR', '/nhaxinhphp/');
 
+
         /**
          * Define Dashboard path.
          */

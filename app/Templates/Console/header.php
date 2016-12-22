@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?= $title ?></title>
+  <title>AdminLTE 2 | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -285,7 +285,7 @@
                   <a href="#" class="btn btn-default btn-flat">Thông tin</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Đăng xuất</a>
+                  <a href="<?= DIR.'login' ?>" class="btn btn-default btn-flat">Đăng xuất</a>
                 </div>
               </li>
             </ul>
@@ -331,8 +331,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Tổng hợp sản phẩm</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Tổng hợp người dùng </a></li>
+            <li class="active"><a href="<?= ADMIN_DIR ?>dashboard-product"><i class="fa fa-circle-o"></i> Tổng hợp sản phẩm</a></li>
+            <li><a href="<?= ADMIN_DIR ?>dashboard-user""><i class="fa fa-circle-o"></i> Tổng hợp người dùng </a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -349,13 +349,8 @@
             <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Quyền </a></li>
           </ul>
         </li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+<div class="content-wrapper" style="min-height: 916px;">
