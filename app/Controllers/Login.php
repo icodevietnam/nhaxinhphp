@@ -21,6 +21,8 @@ class Login extends Controller {
 
     //Avoid to crsf attack 
     public function index(){
+        $message = $_GET['message'];
+
         if( null !== Session::get('admin')){
             Url::redirect(AdminPage::consolePage());
         }
@@ -28,7 +30,7 @@ class Login extends Controller {
         $token = null;
         //Create token
         if(null != Session::get('token')){
-            $token = md5(uniqid(rand(), TRUE));
+            $token = md5(uniqid(rand(), true));
             Session::set('token',$token);
             Session::set('token_time',time());
         }else{
@@ -39,6 +41,7 @@ class Login extends Controller {
     	$data['title'] = 'Đăng nhập';
         $data['menu'] = 'Đăng nhập';
         $data['token'] = $token;
+        $data['message'] = $message;
     	View::renderTemplate('header', $data,LOGIN);
         View::render('Login/Login', $data);
         View::renderTemplate('footer', $data,LOGIN);
@@ -58,15 +61,15 @@ class Login extends Controller {
             Session::set('admin',true);
             Url::redirect(AdminPage::consolePage());
         } else {
-            $data['message']='wrong username or password';
-            Url::redirect(AdminPage::loginPage());
+            $message ='Wrong username or password';
+            Url::redirect(AdminPage::loginPage()."?message=".$message);
         }
     }
 
     //Check token is correct or not
     private function checkToken($token){
         if(!empty($token)){
-            if(Session::get('token') == $token)
+            if(Session::get('token') === $token)
             {
                 return true;
             }
