@@ -102,11 +102,11 @@ class UserModel extends Model
 	function getUsername($username){
 		$data = null;
 		try {
-			$data = $this->db->select("SELECT * FROM ".PREFIX."user WHERE username =:username",array(':username' => $username));
+			$data = $this->db->select("SELECT id,firstname,lastname,email,active,created_date FROM ".PREFIX."user WHERE username =:username",array(':username' => $username));
 		} catch (Exception $e) {
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
-		return $data;
+		return $data[0];
 	}
 
 	function getUserByCode($code){

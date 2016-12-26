@@ -29,7 +29,7 @@ class Login extends Controller {
 
         $token = null;
         //Create token
-        if(null != Session::get('token')){
+        if(null === Session::get('token')){
             $token = md5(uniqid(rand(), true));
             Session::set('token',$token);
             Session::set('token_time',time());
@@ -58,7 +58,8 @@ class Login extends Controller {
         $password = $_POST['password'];
         $token = $_POST['token'];
         if(Password::verify($password, $this->userModel->get_hash($username)) === true && $this->checkToken($token) === true){
-            Session::set('admin',true);
+            $currentUser = $this->userModel->getUsername($username);
+            Session::set('admin',$currentUser);
             Url::redirect(AdminPage::consolePage());
         } else {
             $message ='Wrong username or password';
