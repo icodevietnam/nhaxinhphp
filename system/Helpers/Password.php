@@ -72,6 +72,14 @@ class Password
         return password_verify($password, $hash);
     }
 
+    /**
+     * Verify a password against a hash using a timing attack resistant approach
+     *
+     * @param string $password The password to verify
+     * @param string $pwdb     The hash to verify against
+     *
+     * @return boolean If the password matches the hash
+     */
     public static function compare($password,$pwdb){
         if($password === $pwdb){
             return true;
