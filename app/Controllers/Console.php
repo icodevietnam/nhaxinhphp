@@ -33,5 +33,14 @@ class Console extends Controller {
         View::renderTemplate('footer', $data,CONSOLE);
     }
 
+    public function rolePage(){
+        $data['title'] = 'Quản lý vai trò';
+        $data['menu'] = 'user';
+        $data['preview'] = 'preview';
+        View::renderTemplate('header', $data,CONSOLE);
+        View::render('Console/User/Role', $data);
+        View::renderTemplate('footer', $data,CONSOLE);
+    }
+
 
 }

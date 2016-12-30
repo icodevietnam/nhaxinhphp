@@ -15,6 +15,8 @@
         Url::consolePath().'dist/css/AdminLTE.min.css',
         Url::consolePath().'dist/css/skins/_all-skins.min.css',
         Url::consolePath().'plugins/iCheck/flat/blue.css',
+        Url::consolePath().'plugins/datatables/jquery.dataTables.min.css',
+        Url::consolePath().'plugins/datatables/dataTables.bootstrap.css',
         Url::consolePath().'plugins/morris/morris.css',
         Url::consolePath().'plugins/jvectormap/jquery-jvectormap-1.2.2.css',
         Url::consolePath().'plugins/datepicker/datepicker3.css',
@@ -24,6 +26,29 @@
     ]);
     echo $css; //place to pass data / plugable hook zone
     ?>
+
+    <?php
+    Assets::js([
+        Url::consolePath().'plugins/jQuery/jquery-2.2.3.min.js',
+        Url::consolePath().'plugins/jQueryUI/jquery-ui.min.js',
+        Url::consolePath().'bootstrap/js/bootstrap.min.js',
+        Url::consolePath().'plugins/raphael/raphael.min.js',
+        //Url::consolePath().'plugins/morris/morris.min.js',
+        Url::consolePath().'plugins/sparkline/jquery.sparkline.min.js',
+        Url::consolePath().'plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
+        Url::consolePath().'plugins/jvectormap/jquery-jvectormap-world-mill-en.js',
+        Url::consolePath().'plugins/knob/jquery.knob.js',
+        Url::consolePath().'plugins/moment/moment.min.js',
+        Url::consolePath().'plugins/daterangepicker/daterangepicker.js',
+        Url::consolePath().'plugins/datepicker/bootstrap-datepicker.js',
+        Url::consolePath().'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
+        Url::consolePath().'plugins/slimScroll/jquery.slimscroll.min.js',
+        Url::consolePath().'plugins/fastclick/fastclick.js',
+        Url::consolePath().'plugins/datatables/jquery.dataTables.min.js',
+        Url::consolePath().'plugins/datatables/dataTables.bootstrap.min.js',
+        Url::consolePath().'dist/js/app.min.js'
+    ]);
+  ?>
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -130,7 +155,7 @@
       </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu">
+      <ul class="sidebar-menu">v
         <li class="header"> Mục lục chính </li>
         <li class="active treeview">
           <a href="#">

@@ -18,6 +18,8 @@ $loginAdmin = "/loginAdmin";
 Router::get($console_dir, 'App\Controllers\Console@index');
 //user
 Router::get($console_dir.'/user', 'App\Controllers\Console@userPage');
+//
+Router::get($console_dir.'/role', 'App\Controllers\Console@rolePage');
 
 // Login Routing
 Router::get($login, 'App\Controllers\Login@index');
