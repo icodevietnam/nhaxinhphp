@@ -18,5 +18,7 @@ class User extends Controller {
         $this->userModel = new \App\Models\UserModel();
     }
 
+    //Admin side
+
 
 }

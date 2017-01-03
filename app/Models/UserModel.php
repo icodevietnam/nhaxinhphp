@@ -6,16 +6,16 @@ use App\Models\Common;
 
 class UserModel extends Common
 {
-	private $tableName;
+	protected  $tableName ;
 
-	function __construct($tableName)
+	function __construct()
 	{	
-		$this->tableName = $tableName;
-		parent::__construct($tableName);
+		$this->tableName = 'user';
+		parent::__construct($this->tableName);
 	}
 
 	public function get_hash($username){
-		$data = $this->db->select("SELECT U.password FROM ".PREFIX.$tableName." U, user_role UR, role R WHERE username = :username AND U.id = UR.user_id AND R.id = UR.role_id AND R.name = 'admin' ", array(':username' => $username));
+		$data = $this->db->select("SELECT U.password FROM ".PREFIX.$this->tableName." U, user_role UR, role R WHERE username = :username AND U.id = UR.user_id AND R.id = UR.role_id AND R.name = 'admin' ", array(':username' => $username));
 		return $data[0]->password;
 	}
 
@@ -23,7 +23,7 @@ class UserModel extends Common
 	function checkEmail($email){
 		$data = null;
 		try {
-			$data = $this->db->select("SELECT * FROM ".PREFIX.$tableName." WHERE email =:email",array(':email' => $email));
+			$data = $this->db->select("SELECT * FROM ".PREFIX.$this->tableName." WHERE email =:email",array(':email' => $email));
 			if(count($data) >= 1){
 				return false;
 			}else{
@@ -38,7 +38,7 @@ class UserModel extends Common
 	function checkUsername($username){
 		$data = null;
 		try {
-			$data = $this->db->select("SELECT * FROM ".PREFIX.$tableName." WHERE username =:username",array(':username' => $username));
+			$data = $this->db->select("SELECT * FROM ".PREFIX.$this->tableName." WHERE username =:username",array(':username' => $username));
 			if(count($data) >= 1){
 				return false;
 			}else{
@@ -53,7 +53,7 @@ class UserModel extends Common
 	function checkPassword($password,$id){
 		$data = null;
 		try {
-			$data = $this->db->select("SELECT * FROM ".PREFIX.$tableName." WHERE password =:password AND id = :id",array(':password' => $password,':id' => $id));
+			$data = $this->db->select("SELECT * FROM ".PREFIX.$this->tableName." WHERE password =:password AND id = :id",array(':password' => $password,':id' => $id));
 			if(count($data) >= 1){
 				return true;
 			}else{

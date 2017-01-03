@@ -6,7 +6,7 @@ use Core\Model;
 class Common extends Model
 {
 	
-	private $tableName;
+	protected $tableName;
 
 	function __construct($tableName)
 	{	
@@ -14,14 +14,9 @@ class Common extends Model
 		parent::__construct();
 	}
 
-	public function countRow($table){
-		$query = " SELECT COUNT(1) FROM ".$tableName;
-		$data = $this->db->select($query);
-		return $data[0];
-	}
 
 	public function showTable($start,$limit){
-		$query = " SELECT * FROM ".$tableName." ORDER BY CREATED_DATE DESC LIMIT ".$start.",".$limit." ";	
+		$query = " SELECT * FROM ".$this->tableName." ORDER BY CREATED_DATE DESC LIMIT ".$start.",".$limit." ";	
 		$data = $this->db->select($query);
 		return $data;
 	}
@@ -33,12 +28,12 @@ class Common extends Model
 
 	//Get All
 	public function getAll(){
-		return $this->db->select("SELECT * FROM ".PREFIX.$tableName." ORDER BY CREATED_DATE DESC ");
+		return $this->db->select("SELECT * FROM ".PREFIX.$this->tableName." ORDER BY CREATED_DATE DESC ");
 	}
 
 	public function add($data){
 		try {
-			$this->db->insert(PREFIX.$tableName,$data);
+			$this->db->insert(PREFIX.$this->tableName,$data);
 			return true;
 		} catch (Exception $e) {
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
@@ -48,7 +43,7 @@ class Common extends Model
 
 	public function delete($id){
 		try {
-			$this->db->delete(PREFIX.$tableName,array('id' => $id));
+			$this->db->delete(PREFIX.$this->tableName,array('id' => $id));
 			return true;
 		} catch (Exception $e) {
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
@@ -59,7 +54,7 @@ class Common extends Model
 	public function get($id){
 		$data = null;
 		try {
-			$data = $this->db->select("SELECT * FROM ".PREFIX.$tableName. " WHERE id =:id",array(':id' => $id));
+			$data = $this->db->select("SELECT * FROM ".PREFIX.$this->tableName. " WHERE id =:id",array(':id' => $id));
 		} catch (Exception $e) {
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
@@ -68,7 +63,7 @@ class Common extends Model
 
 	public function update($data,$where){
 		try {
-			$this->db->update(PREFIX.$tableName,$data,$where);
+			$this->db->update(PREFIX.$this->tableName,$data,$where);
 			return true;
 		} catch (Exception $e) {
 			echo 'Caught exception: ',  $e->getMessage(), "\n";

@@ -54,18 +54,17 @@ class Login extends Controller {
 
     // Login with post method and verify token
     public function login(){
-        // $username = $_POST['username'];
-        // $password = $_POST['password'];
-        // $token = $_POST['token'];
-        // if(Password::verify($password, $this->userModel->get_hash($username)) === true && $this->checkToken($token) === true){
-        //     $currentUser = $this->userModel->getUsername($username);
-        //     Session::set('admin',$currentUser);
-        //     Url::redirect(AdminPage::consolePage());
-        // } else {
-        //     $message ='Wrong username or password';
-        //     Url::redirect(AdminPage::loginPage()."?message=".$message);
-        // }
-        return $this->userModel->get_hash($username);
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $token = $_POST['token'];
+        if(Password::verify($password, $this->userModel->get_hash($username)) === true && $this->checkToken($token) === true){
+            $currentUser = $this->userModel->getUsername($username);
+            Session::set('admin',$currentUser);
+            Url::redirect(AdminPage::consolePage());
+        } else {
+            $message ='Wrong username or password';
+            Url::redirect(AdminPage::loginPage()."?message=".$message);
+        }
     }
 
     //Check token is correct or not
