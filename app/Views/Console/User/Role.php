@@ -37,9 +37,8 @@
 
         </div>
 </section>
-
 <?php
 Assets::js([
-  Url::consolePath().'js/pages/user.js'
+  Url::consolePath().'js/pages/role.js'
 ]);
 ?>

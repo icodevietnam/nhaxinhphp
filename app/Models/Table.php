@@ -18,8 +18,16 @@ class Table extends Model
 		return $data[0];
 	}
 
-	public function showTable($table){
-		
+	public function showTable($table,$start,$limit){
+		$query = " SELECT * FROM ".$table." ORDER BY CREATED_DATE DESC LIMIT ".$start.",".$limit." ";	
+		$data = $this->db->select($query);
+		return $data;
+	}
+
+	public function tableCustomCols($cols,$table,$start,$limit){
+		$query = " SELECT ".$cols." FROM ".$table." ORDER BY CREATED_DATE DESC LIMIT ".$start.",".$limit." ";	
+		$data = $this->db->select($query);
+		return $data;
 	}
 
 }
