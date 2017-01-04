@@ -19,6 +19,9 @@ class User extends Controller {
     }
 
     //Admin side
+    public function showTable(){
+    	
+    }
 
 
 }
