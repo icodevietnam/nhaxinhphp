@@ -22,6 +22,7 @@ class Common extends Model
 	}
 
 	public function tableCustomCols($cols,$start,$limit){
+		$query = " SELECT ".$cols." FROM ".$this->tableName." ORDER BY CREATED_DATE DESC LIMIT ".$start.",".$limit." ";	
 		$data = $this->db->select($query);
 		return $data;
 	}

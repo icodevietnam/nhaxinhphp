@@ -10,12 +10,20 @@ use Helpers\Url;
 
 class Role extends Controller {	
 
-    private $userModel;
+    private $roleModel;
 
 	public function __construct()
     {
         parent::__construct();
-        $this->userModel = new \App\Models\UserModel();
+        $this->roleModel = new \App\Models\RoleModel();
+    }
+
+    //Admin side - Show Table
+    public function showTable(){
+    	$start = $_GET['iDisplayStart'];
+        $length = $_GET['iDisplayLength'];
+     	$data = $this->roleModel->showTable($start,$length);   
+     	echo json_encode($data);
     }
 
 }

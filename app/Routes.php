@@ -10,6 +10,7 @@ $console_dir = "/console";
 $logout = "/logout";
 $login = "/login";
 $loginAdmin = "/loginAdmin";
+$rolePath = "/role";
 
 /** Define static routes. */
 
@@ -25,6 +26,9 @@ Router::get($console_dir.'/role', 'App\Controllers\Console@rolePage');
 Router::get($login, 'App\Controllers\Login@index');
 Router::get($logout, 'App\Controllers\Login@logout');
 Router::post($loginAdmin, 'App\Controllers\Login@login');
+
+// Role
+Router::get($rolePath.'/table','App\Controllers\Role@showTable');
 
 
 /** End default routes */

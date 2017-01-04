@@ -20,7 +20,9 @@ class User extends Controller {
 
     //Admin side
     public function showTable(){
-    	
+    	$start = $_GET['iDisplayStart'];
+        $length = $_GET['iDisplayLength'];
+        echo json_encode($start."-".$length);
     }
 
 

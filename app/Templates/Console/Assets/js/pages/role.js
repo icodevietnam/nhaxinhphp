@@ -2,11 +2,13 @@ var Role = {
 	init : function(){
 		this.showTable();
 	},
+	path : function(){
+		return CONSOLE_DIR + 'role/table';
+	},
 	list : function(){
 
 	},
 	showTable : function(){
-		var dataItems = [];
 		$('#tblItems').dataTable({
 				"bDestroy" : true,
 				"bSort" : true,
@@ -14,10 +16,8 @@ var Role = {
 				"bLengthChange" : true,
 				"bPaginate" : true,
 				"sDom" : '<"top">rt<"bottom"flp><"clear">',
-				"bProcessing": true,
 				"bServerSide": true,
-				"sAjaxSource": "abc",
-				"aaData" : dataItems,
+				"sAjaxSource": this.path(),
 				"aaSorting" : [],
 				"aoColumns" : [ {
 					"sTitle" : "No"

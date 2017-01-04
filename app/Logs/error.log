@@ -1,80 +1,350 @@
 Exception information:
 
-           Date: Jan 04, 2017 6:21AM
+           Date: Jan 04, 2017 17:10PM
 
-           Message: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nhaxinh.u' doesn't exist
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
 
-           Code: 42S02
+           Code: 42000
 
-           File: C:\xampp\htdocs\nhaxinhphp\system\Helpers\Database.php
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
 
            Line: 96
 
            Stack trace:
 
-           #0 C:\xampp\htdocs\nhaxinhphp\system\Helpers\Database.php(96): PDOStatement->execute()
-#1 C:\xampp\htdocs\nhaxinhphp\app\Models\UserModel.php(18): Helpers\Database->select('SELECT U.passwo...', Array)
-#2 C:\xampp\htdocs\nhaxinhphp\app\Controllers\Login.php(60): app\Models\UserModel->get_hash('admin')
-#3 [internal function]: App\Controllers\Login->login()
-#4 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(193): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(224): Core\Router->invokeController('App\\Controllers...', 'login', Array)
-#6 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
-#7 C:\xampp\htdocs\nhaxinhphp\app\Routes.php(41): Core\Router->dispatch()
-#8 C:\xampp\htdocs\nhaxinhphp\index.php(74): require('C:\\xampp\\htdocs...')
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(25): app\Models\Common->showTable(NULL, NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
 #9 {main}
 
            ---------
 
 Exception information:
 
-           Date: Jan 04, 2017 6:26AM
+           Date: Jan 04, 2017 17:11PM
 
-           Message: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nhaxinh.u' doesn't exist
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
 
-           Code: 42S02
+           Code: 42000
 
-           File: C:\xampp\htdocs\nhaxinhphp\system\Helpers\Database.php
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
 
            Line: 96
 
            Stack trace:
 
-           #0 C:\xampp\htdocs\nhaxinhphp\system\Helpers\Database.php(96): PDOStatement->execute()
-#1 C:\xampp\htdocs\nhaxinhphp\app\Models\UserModel.php(18): Helpers\Database->select('SELECT U.passwo...', Array)
-#2 C:\xampp\htdocs\nhaxinhphp\app\Controllers\Login.php(60): app\Models\UserModel->get_hash('admin')
-#3 [internal function]: App\Controllers\Login->login()
-#4 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(193): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(224): Core\Router->invokeController('App\\Controllers...', 'login', Array)
-#6 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
-#7 C:\xampp\htdocs\nhaxinhphp\app\Routes.php(41): Core\Router->dispatch()
-#8 C:\xampp\htdocs\nhaxinhphp\index.php(74): require('C:\\xampp\\htdocs...')
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(25): app\Models\Common->showTable(NULL, NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
 #9 {main}
 
            ---------
 
 Exception information:
 
-           Date: Jan 04, 2017 6:26AM
+           Date: Jan 04, 2017 17:13PM
 
-           Message: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nhaxinh.u' doesn't exist
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
 
-           Code: 42S02
+           Code: 42000
 
-           File: C:\xampp\htdocs\nhaxinhphp\system\Helpers\Database.php
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
 
            Line: 96
 
            Stack trace:
 
-           #0 C:\xampp\htdocs\nhaxinhphp\system\Helpers\Database.php(96): PDOStatement->execute()
-#1 C:\xampp\htdocs\nhaxinhphp\app\Models\UserModel.php(17): Helpers\Database->select('SELECT U.passwo...', Array)
-#2 C:\xampp\htdocs\nhaxinhphp\app\Controllers\Login.php(60): app\Models\UserModel->get_hash('admin')
-#3 [internal function]: App\Controllers\Login->login()
-#4 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(193): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(224): Core\Router->invokeController('App\\Controllers...', 'login', Array)
-#6 C:\xampp\htdocs\nhaxinhphp\system\Core\Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
-#7 C:\xampp\htdocs\nhaxinhphp\app\Routes.php(41): Core\Router->dispatch()
-#8 C:\xampp\htdocs\nhaxinhphp\index.php(74): require('C:\\xampp\\htdocs...')
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(25): app\Models\Common->showTable(NULL, NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:14PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable(NULL, NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:15PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable(NULL, NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:16PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable('0', NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:16PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable(NULL, NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:16PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable('0', NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:16PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable('0', NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:16PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable('0', NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:17PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable('0', NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:17PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable('0', NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Jan 04, 2017 17:17PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+
+           Code: 42000
+
+           File: /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /opt/lampp/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nhaxinhphp/app/Models/Common.php(20): Helpers\Database->select(' SELECT * FROM ...')
+#2 /opt/lampp/htdocs/nhaxinhphp/app/Controllers/Role.php(31): app\Models\Common->showTable('0', NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /opt/lampp/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /opt/lampp/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /opt/lampp/htdocs/nhaxinhphp/index.php(74): require('/opt/lampp/htdo...')
 #9 {main}
 
            ---------
