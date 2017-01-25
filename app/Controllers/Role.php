@@ -20,10 +20,16 @@ class Role extends Controller {
 
     //Admin side - Show Table
     public function showTable(){
-    	$start = $_GET['iDisplayStart'];
-        $length = $_GET['iDisplayLength'];
-     	$data = $this->roleModel->showTable($start,$length);   
-     	echo json_encode($data);
+    	$start = $_GET['iTableStart'];
+        $length = $_GET['iTableLength'];
+
+        if(!isset($start))
+        {
+            $start = 0;
+        }
+
+        $rows = $this->roleModel->showTable($start,$length,"desc");
+        echo json_encode($rows);
     }
 
 }
