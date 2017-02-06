@@ -1,0 +1,54 @@
+Exception information:
+
+           Date: Feb 03, 2017 22:25PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY created_date ASC' at line 1
+
+           Code: 42000
+
+           File: /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/app/Models/TableModel.php(16): Helpers\Database->select('SELECT * FROM  ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/app/Controllers/Role.php(34): app\Models\TableModel->table(NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/index.php(74): require('/Applications/X...')
+#9 {main}
+
+           ---------
+
+Exception information:
+
+           Date: Feb 03, 2017 22:27PM
+
+           Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY created_date ASC' at line 1
+
+           Code: 42000
+
+           File: /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Helpers/Database.php
+
+           Line: 96
+
+           Stack trace:
+
+           #0 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Helpers/Database.php(96): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/app/Models/TableModel.php(16): Helpers\Database->select('SELECT * FROM  ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/app/Controllers/Role.php(25): app\Models\TableModel->table(NULL)
+#3 [internal function]: App\Controllers\Role->showTable()
+#4 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Core/Router.php(193): call_user_func_array(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Core/Router.php(224): Core\Router->invokeController('App\\Controllers...', 'showTable', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/system/Core/Router.php(261): Core\Router->invokeObject('App\\Controllers...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/app/Routes.php(45): Core\Router->dispatch()
+#8 /Applications/XAMPP/xamppfiles/htdocs/nhaxinhphp/index.php(74): require('/Applications/X...')
+#9 {main}
+
+           ---------
+

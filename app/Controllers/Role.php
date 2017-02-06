@@ -11,24 +11,20 @@ use Helpers\Url;
 class Role extends Controller {	
 
     private $roleModel;
+    private $tableModel;
 
 	public function __construct()
     {
         parent::__construct();
         $this->roleModel = new \App\Models\RoleModel();
+        $this->tableModel = new \App\Models\TableModel();
     }
 
     //Admin side - Show Table
     public function showTable(){
-    	$start = $_GET['iTableStart'];
-        $length = $_GET['iTableLength'];
+        $table = $_GET['iTable'];
 
-        if(!isset($start))
-        {
-            $start = 0;
-        }
-
-        $rows = $this->roleModel->showTable($start,$length,"desc");
+        $rows = $this->tableModel->table($table);
         echo json_encode($rows);
     }
 

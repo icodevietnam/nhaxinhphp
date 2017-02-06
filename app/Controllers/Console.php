@@ -42,5 +42,28 @@ class Console extends Controller {
         View::renderTemplate('footer', $data,CONSOLE);
     }
 
+    public function createPage($page){
+        $token = $_GET['token'];
+        $data['title'] = 'Tạo vai trò';
+        $data['menu'] = 'user';
+        $data['preview'] = 'preview';
+
+        View::renderTemplate('header', $data,CONSOLE);
+        View::render('Console/User/'.ucfirst($page).'-Create', $data);
+        View::renderTemplate('footer', $data,CONSOLE);
+    }
+
+    public function editPage($page){
+        $itemId = $_GET['itemId'];
+        $token = $_GET['token'];
+        $data['title'] = 'Sửa vai trò';
+        $data['menu'] = 'user';
+        $data['preview'] = 'preview';
+
+        View::renderTemplate('header', $data,CONSOLE);
+        View::render('Console/User/'.ucfirst($page).'-Edit', $data);
+        View::renderTemplate('footer', $data,CONSOLE);
+    }
+
 
 }

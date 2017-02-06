@@ -9,23 +9,18 @@
   </ol>
 </section>
 <section class="content">
-  <div class="col-lg-12">
+  <div class="col-lg-6">
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title"><?= $title ?></h3>
-              <a href="#" onclick="return ListTable.createUrl();" class="btn btn-sm btn-primary pull-right">Tạo người dùng</a>
+              <!--<a href="#" onclick="return ListTable.createUrl();" class="btn btn-sm btn-primary pull-right">Tạo người dùng</a> -->
             </div>
             <!-- /.box-header -->
             <!-- form start -->
             <form role="form">
               <div class="box-body">
-                <span id="iTable" class="hidden">role</span>
-                <div>
-                  <table id="tblItems"
-                      class="table table-responsive table-bordered table-hover dataTable">
-                  </table>
-                </div>
+                
               </div>
               <!-- /.box-body -->
 
@@ -40,6 +35,6 @@
 </section>
 <?php
 Assets::js([
-  Url::consolePath().'js/pages/table-admin.js'
+  //Url::consolePath().'js/pages/table-admin.js'
 ]);
 ?>

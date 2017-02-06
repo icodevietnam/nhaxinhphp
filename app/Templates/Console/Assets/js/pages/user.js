@@ -1,4 +1,4 @@
-var User = {
+var Role = {
 	init : function(){
 		this.showTable();
 	},
@@ -36,4 +36,4 @@ var User = {
 		});
 	}
 };
-User.init();
+Role.init();

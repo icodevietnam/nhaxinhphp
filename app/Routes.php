@@ -30,6 +30,9 @@ Router::post($loginAdmin, 'App\Controllers\Login@login');
 // Role
 Router::get($rolePath.'/table','App\Controllers\Role@showTable');
 
+//Common
+Router::get('/(:any)/create', 'App\Controllers\Console@createPage');
+Router::get('/(:any)/edit', 'App\Controllers\Console@editPage');
 
 /** End default routes */
 
