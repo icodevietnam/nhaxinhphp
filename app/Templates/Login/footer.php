@@ -2,6 +2,7 @@
 <div class="footer">
 	<strong>Copyright &copy; 2016 <a href="http://kasafuniture.com">Casa Funiture</a>.</strong> All rights
 </div>
+
 <?php
 Assets::js([
 	Url::templateLoginPath().'js/jquery-2.1.1.js',

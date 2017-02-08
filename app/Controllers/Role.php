@@ -28,4 +28,11 @@ class Role extends Controller {
         echo json_encode($rows);
     }
 
+    public function delete(){
+        $table = $_GET['iTable'];
+        $itemId = $_GET['itemId'];
+        $isDeleted = $this->tableModel->delete($table,$id);
+        echo json_encode($isDeleted);       
+    }
+
 }

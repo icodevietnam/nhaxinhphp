@@ -19,4 +19,6 @@ class Table extends Controller {
     	
     }
 
+    public function
+
 }

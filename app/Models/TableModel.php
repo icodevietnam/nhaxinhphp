@@ -17,4 +17,13 @@ class TableModel extends Model
 		return $data;
 	}
 
+	public function delete($table,$id){
+		try {
+			$this->db->delete(PREFIX.$table,array('id' => $id));
+			return true;
+		} catch (Exception $e) {
+			return false;
+		}
+	}
+
 }

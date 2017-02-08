@@ -34,11 +34,11 @@ var ListTable = {
 				$.each(response, function(key, value) {
 					i++;
 					dataItems.push([
-					i,value.name,value.description,
+					i,value.name,value.description,value.created_date,value.last_updated,
 					"<a href='#' class='btn btn-sm btn-primary' onclick='return ListTable.editUrl("
-					+ value.id + ");' >Edit</a>",
+					+ value.id + ");' >Sửa</a>",
 					"<button class='btn btn-sm btn-danger' onclick='deleteItem("
-										+ value.id + ");'>Delete</button>" ]);
+										+ value.id + ");'>Xóa</button>" ]);
 				});
 				$('#tblItems').dataTable({
 					"bDestroy" : true,
@@ -50,15 +50,19 @@ var ListTable = {
 					"aaData" : dataItems,
 					"aaSorting" : [],
 					"aoColumns" : [ {
-						"sTitle" : "No"
+						"sTitle" : "Số"
 					}, {
-						"sTitle" : "Name"
+						"sTitle" : "Tên"
 					}, {
-						"sTitle" : "Description"
+						"sTitle" : "Chú Thích"
 					}, {
-						"sTitle" : "Edit"
+						"sTitle" : "Ngày Tạo"
 					}, {
-						"sTitle" : "Delete"
+						"sTitle" : "Sửa Lần Cuối"
+					}, {
+						"sTitle" : "Sửa"
+					}, {
+						"sTitle" : "Xóa"
 					} ]
 				});
 			}

@@ -33,7 +33,6 @@
         Url::consolePath().'plugins/jQueryUI/jquery-ui.min.js',
         Url::consolePath().'bootstrap/js/bootstrap.min.js',
         Url::consolePath().'plugins/raphael/raphael.min.js',
-        //Url::consolePath().'plugins/morris/morris.min.js',
         Url::consolePath().'plugins/sparkline/jquery.sparkline.min.js',
         Url::consolePath().'plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
         Url::consolePath().'plugins/jvectormap/jquery-jvectormap-world-mill-en.js',
@@ -46,6 +45,8 @@
         Url::consolePath().'plugins/fastclick/fastclick.js',
         Url::consolePath().'plugins/datatables/jquery.dataTables.min.js',
         Url::consolePath().'plugins/datatables/dataTables.bootstrap.min.js',
+        Url::consolePath().'plugins/bootbox/bootbox.js',
+        Url::consolePath().'plugins/parleys/parleys.min.js',
         Url::consolePath().'dist/js/app.min.js'
     ]);
   ?>
@@ -53,6 +54,28 @@
   <script>
     var CONSOLE_DIR = '<?= DIR ?>';
     var TOKEN = '<?= Session::get('token') ?>';
+
+    $('#adminForm').parsley();
+
+    window.alert = function(msg,size) {
+      bootbox.alert({
+        size : size,
+        message : msg
+      });
+    };
+
+    window.confirm = function (size,message, action) {
+      bootbox.confirm({ 
+        size: size,
+        message: message, 
+        callback: function(result){
+          if(result===true){
+            action;
+          }
+        }
+      })
+    }
+
   </script>
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
